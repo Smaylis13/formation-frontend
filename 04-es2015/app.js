@@ -87,7 +87,13 @@ class TripService{
 		this.trips.add(new Trip('rio-de-janeiro', 'Rio de Janeiro', 'img/rio-de-janeiro.jpg'))
 	}
 	findByName(tripName){
-
+		return new Promise((resolve,reject) => {
+			if(tripName){
+				return trips
+			}else{
+				reject("Erreur name")
+			}
+		})
 	}
 }
 class PriceService {
