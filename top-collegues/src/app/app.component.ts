@@ -19,10 +19,23 @@ export class AppComponent implements OnInit {
 
   add(pseudo:HTMLInputElement, imageUrl:HTMLInputElement, toastSuccess:HTMLInputElement){
 
-    this.collegues.push(new Collegue(pseudo.value,imageUrl.value,0));
-    pseudo.value=""
-    imageUrl.value=""
-    toastSuccess.style.visibility = 'visible'
+      if (pseudo.value != ""  &&  imageUrl.value !=""){
+      this.collegues.push(new Collegue(pseudo.value,imageUrl.value,0));
+
+      toastSuccess.className = ""
+      toastSuccess.className += "alert alert-success";
+      toastSuccess.innerHTML = `Le collègue <strong>${pseudo.value} </strong>a été ajouté avec  succès`
+      pseudo.value=""
+      imageUrl.value=""
+      toastSuccess.style.visibility = 'visible'
+      setTimeout(function(){toastSuccess.style.visibility = 'hidden'},3000);
+    }else{
+      toastSuccess.className = ""
+      toastSuccess.className += "alert alert-danger";
+      toastSuccess.innerHTML = `Erreur vous devez saisir un pseudo et une URL`
+      toastSuccess.style.visibility = 'visible'
+      
+    }
     return false;
   }
 }

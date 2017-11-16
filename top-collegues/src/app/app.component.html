@@ -18,9 +18,14 @@
   </div>
 
   <button (click)="add(pseudo,imageUrl,toastSuccess)" class="btn btn-primary">Ajouter un nouveau collègue</button>
-  <div style="visibility:hidden" class="alert alert-success" #toastSuccess>
-    <strong>Le collègue {{pseudo.value}} a été ajouté avec  succès</strong> 
+  <div style="visibility:hidden" class="alert" #toastSuccess>
   </div>
 
 </form>
+<div class="container-fluid">
+  <div class="row">
+    <app-un-collegue *ngFor="let col of collegues" [collegue]="col"></app-un-collegue>
+  </div>
+</div>
+
 {{collegues | json}}
