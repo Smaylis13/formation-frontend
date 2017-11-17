@@ -1,13 +1,14 @@
+
 <div class="col-md-4">
     
-  <div class="card-group" align="center" style="width: 20rem;">
-    <img class="card-img-top" [src]="collegue.url" alt="Photo de ">
+  <div class="card-group" align="center" style="width: 12rem;">
+    <img class="card-img-top" [src]="collegue.url" alt="Photo de "   height="100">
       <div class="card-block">
         <h4 class="card-title">{{collegue.nom}}</h4>
         <h4 class="card-title">{{collegue.score}}</h4>
         
-        <button type="button" class="btn btn-outline-primary">J'aime</button>
-        <button type="button" class="btn btn-outline-danger">Je déteste</button>
+        <button type="button" class="btn btn-outline-primary" (click)="jaime()">J'aime</button>
+        <button type="button" class="btn btn-outline-danger" (click)="jeDeteste()">Je déteste</button>
       </div>
    </div>
 </div>

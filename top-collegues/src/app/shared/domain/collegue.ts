@@ -11,4 +11,14 @@ export class Collegue {
     get score(): number {
         return this._score;
     }
+    set score(s){
+        this._score = s;
+    }
+
+    set nom(n){
+        this._nom = n
+    }
+    set url(u) {
+        this._url = u
+    }
 }

@@ -4,7 +4,7 @@
     Top Collègues
   </h1>
 </div>
-<h2>Les meilleurs collègies du moment </h2>
+<h2>Les meilleurs Collègues du moment </h2>
 
 
 <form>
@@ -21,11 +21,25 @@
   <div style="visibility:hidden" class="alert" #toastSuccess>
   </div>
 
-</form>
-<div class="container-fluid">
+</form> 
+<nav class="navbar navbar-default">
+    <div class="container">
+        <ol class="breadcrumb">
+          <li><a routerLink="/classique">Classique</a></li>
+          <li><a routerLink="/tableau">Tableau</a></li>
+          <li><a routerLink="/carrousel" routerLinkActive="active">Carrousel</a></li>
+        </ol>
+
+    </div>
+</nav>
+<div id="content">
+    <router-outlet></router-outlet>
+</div>
+
+<!--div class="container-fluid">
   <div class="row">
-    <app-un-collegue *ngFor="let col of collegues" [collegue]="col"></app-un-collegue>
+    <app-un-collegue *ngFor="let col of collegues" [collegue]="col" [serviceCol]="collegueService"></app-un-collegue>
   </div>
 </div>
 
-{{collegues | json}}
+{{collegues | json}}-->
