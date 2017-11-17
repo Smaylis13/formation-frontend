@@ -8,3 +8,4 @@ ng build --prod
 cd dist
 now
 ```
+==> (https://dist-yxwapgcupa.now.sh/)
