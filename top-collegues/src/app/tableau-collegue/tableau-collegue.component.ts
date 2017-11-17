@@ -18,11 +18,11 @@ export class TableauCollegueComponent implements OnInit {
   }
 
   // TODO: jaime() et jeDesteste()
-  jaime(){
-    
+  jaime(col:Collegue){
+    this.collegueService.aimerUnCollegue(col)
   }
 
-  jeDeteste(){
-   
+  jeDeteste(col:Collegue){
+    this.collegueService.aimerUnCollegue(col)
   }
 }

@@ -22,16 +22,12 @@
   </div>
 
 </form> 
-<nav class="navbar navbar-default">
-    <div class="container">
-        <ol class="breadcrumb">
-          <li><a routerLink="/classique">Classique</a></li>
-          <li><a routerLink="/tableau">Tableau</a></li>
-          <li><a routerLink="/carrousel" routerLinkActive="active">Carrousel</a></li>
-        </ol>
 
-    </div>
-</nav>
+<ul class="nav nav-pills">
+    <li class="nav-item">  <a class="nav-link" routerLink="/classique" routerLinkActive="active">Classique</a>    </li>
+    <li class="nav-item">  <a class="nav-link" routerLink="/tableau"   routerLinkActive="active">Tableau</a>    </li>
+    <li class="nav-item">  <a class="nav-link" routerLink="/carrousel" routerLinkActive="active">Carrousel</a>   </li>
+  </ul>
 <div id="content">
     <router-outlet></router-outlet>
 </div>

@@ -9,7 +9,7 @@ const httpOptions = {
 @Injectable()
 export class CollegueService {
 
-   collegues:Collegue[]
+   collegues:Array<Collegue>
     constructor(private http: HttpClient) {
       //this.collegues = [new Collegue("Charles","http://www.tapis-chic.com/img/p/thickbox/1817-8856.jpg",20)]
       
@@ -36,6 +36,7 @@ export class CollegueService {
     aimerUnCollegue(unCollegue:Collegue):Promise<Collegue> {
       return new Promise((resolve,reject)=>{
         let list=this.collegues.filter(c => c.nom==unCollegue.nom);
+        
         if(list.length>0){
           list[0].score = list[0].score + 10
         }

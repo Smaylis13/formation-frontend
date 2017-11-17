@@ -29,7 +29,6 @@ export class AppComponent implements OnInit {
 
     let collegue= new Collegue(pseudo.value,imageUrl.value,0)
     
-       //let b:boolean
        if (pseudo.value != ""  &&  imageUrl.value !=""){
         
        this.collegueService.sauvegarder(collegue).then(collegue =>{
